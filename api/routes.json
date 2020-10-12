@@ -1,0 +1,5 @@
+{
+    "/api/*": "/$1",
+    "/api/favouriteTvShows": "/favouriteTvShows",
+    "/api/favouriteTvShows/:id": "/favouriteTvShows/:id"
+}

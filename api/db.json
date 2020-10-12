@@ -1,0 +1,78 @@
+{
+  "favouriteMovies": [
+    {
+      "id": 0,
+      "movie": {
+        "id": 0,
+        "name": "El padrino",
+        "genre": "mafia"
+      },
+      "watching": 30,
+      "completed": false,
+      "rating": 5
+    },
+    {
+      "id": 1,
+      "movie": {
+        "id": 1,
+        "name": "El padrino II",
+        "genre": "mafia"
+      },
+      "watching": 80,
+      "completed": false,
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "movie": {
+        "id": 2,
+        "name": "Rapido y furioso",
+        "genre": "action"
+      },
+      "watching": null,
+      "completed": true,
+      "rating": 1
+    }
+  ],
+  "favouriteTvShows": [
+    {
+      "id": 0,
+      "tvShow": {
+        "id": 0,
+        "name": "Lost",
+        "genre": "fansty",
+        "productionCompnay": "AMAZON"
+      },
+      "watchingSeason": 2,
+      "watchingEpisode": 10,
+      "completed": false,
+      "rating": 5
+    },
+    {
+      "id": 1,
+      "tvShow": {
+        "id": 1,
+        "name": "Westworld UPDETIADO PA",
+        "genre": "sci fi",
+        "productionCompnay": "HBO"
+      },
+      "watchingSeason": 300,
+      "watchingEpisode": 400,
+      "completed": true,
+      "rating": 40
+    },
+    {
+      "id": 2,
+      "tvShow": {
+        "id": 2,
+        "name": "Black Mirror",
+        "genre": "sci fi",
+        "productionCompnay": "BBC"
+      },
+      "watchingSeason": 1,
+      "watchingEpisode": 10,
+      "completed": false,
+      "rating": 3
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<p>tv-shows-reminder works!</p>
+<div *ngFor="let userTvShow of userTvShows">
+    
+    <p>TV SHOWS INFO: </p>
+    <p>{{userTvShow.tvShow.id}}</p>
+    <p>{{userTvShow.tvShow.name}}</p>
+    <p>{{userTvShow.tvShow.genre}}</p>
+    <p>{{userTvShow.tvShow.productionCompnay}}</p>
+
+    <p>USER RELATED INFO: </p>
+    <p>{{userTvShow.watchingSeason}}</p>
+    <p>{{userTvShow.watchingEpisode}}</p>
+    <p>{{userTvShow.completed}}</p>
+    <p>{{userTvShow.rating}}</p>
+    
+</div>
