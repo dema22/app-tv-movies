@@ -1,5 +1,5 @@
 export interface TvShow {
-  id: number;
+  id?: number;
   name: string;
   genre: string;
   productionCompany: string;

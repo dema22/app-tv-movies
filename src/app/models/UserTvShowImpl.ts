@@ -1,13 +1,23 @@
+import { TvShowImpl } from './TvShowImpl';
+
 export class UserTvShowsImpl {
-  constructor() {}
+
+  constructor(
+    public tvShow?: TvShowImpl,
+    public watchingSeason?: number,
+    public watchingEpisode?: number,
+    public completed?: boolean,
+    public rating?: number,
+  ) {}  
+  
+  //constructor() {}
 
   /*constructor(
-    private _id?: number,
-    private _tvShow?: number,
-    private _watchingSeason?: number,
-    private _watchingEpisode?: number,
-    private _completed?: boolean,
-    private _rating?: number
+    private _tvShow: TvShowImpl,
+    private _watchingSeason: number,
+    private _watchingEpisode: number,
+    private _completed: boolean,
+    private _rating: number,
   ) {}
 
   get id(): number {
@@ -25,4 +35,6 @@ export class UserTvShowsImpl {
   set watchingSeason(watchingSeason: number) {
     this._watchingSeason = watchingSeason;
   }*/
+
+
 }

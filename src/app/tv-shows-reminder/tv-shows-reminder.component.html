@@ -15,7 +15,7 @@
 -->
 
 <button mat-raised-button (click)="openTvShowDialog()">Add a tv show to your list!</button>
-<table mat-table [dataSource]="userTvShows">
+<table #table mat-table [dataSource]="userTvShows">
     
     <!-- Name Column -->
     <ng-container matColumnDef="tvShowName">

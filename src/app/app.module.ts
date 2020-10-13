@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TvShowsReminderComponent } from './tv-shows-reminder/tv-shows-reminder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Importing material table and dialgo
+// Importing material table and dialog
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogAddTvShowComponent } from './dialog-add-tv-show/dialog-add-tv-show.component';
@@ -21,6 +21,9 @@ import {MatInputModule} from '@angular/material/input';
 
 // Importing forms from angular
 import { FormsModule } from '@angular/forms';
+
+// Importing material checkbox
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -39,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

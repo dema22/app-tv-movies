@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { TvShowsService } from '../services/tv-shows.service';
 
 import { UserTvShows } from '../interfaces/UserTvShows';
@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogAddTvShowComponent } from '../dialog-add-tv-show/dialog-add-tv-show.component';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-tv-shows-reminder',
@@ -16,6 +17,8 @@ export class TvShowsReminderComponent implements AfterViewInit { //implements On
 
   userTvShows: UserTvShows[] = [];
   displayedColumns: string[] = ['tvShowName', 'tvShowGenre', 'productionCompany', 'watchingSeason', 'WatchingEpisode', 'completed', 'personalRating'];
+
+  @ViewChild(MatTable) table: MatTable<any>;
 
   constructor(private tvShowService: TvShowsService, public dialog: MatDialog) { }
 
@@ -30,17 +33,19 @@ export class TvShowsReminderComponent implements AfterViewInit { //implements On
 
   openTvShowDialog(): void {
     let dialogRef = this.dialog.open(DialogAddTvShowComponent,{
-      height: '600',
+      height: '600px',
       width: '600px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+    dialogRef.afterClosed().subscribe(newTvShow => {
+      console.log(newTvShow);
+      this.addTvShow(newTvShow);
     });
   }
 
   ngAfterViewInit(): void{
     this.getAllShows();
+    //this.addTvShow();
   }
 
   getAllShows(): void {
@@ -77,22 +82,26 @@ export class TvShowsReminderComponent implements AfterViewInit { //implements On
     this.tvShowService.updateTvShow(updatedTvShow).subscribe();
   }
 
-  addTvShow(): void {
-    const newTvShow = {
-      "id": 3,
+  addTvShow(newTvShow: UserTvShows): void {
+    /*const newTvShow = {
+      //"id": 3,
       "tvShow": {
-        "id": 3,
-        "name": "Black Mirror",
-        "genre": "sci fi",
-        "productionCompany": "BBC"
+        //"id": 3,
+        "name": "Banshee",
+        "genre": "action",
+        "productionCompany": "HBO"
       },
-      "watchingSeason": 1,
-      "watchingEpisode": 10,
+      "watchingSeason": 2,
+      "watchingEpisode": 1,
       "completed": false,
-      "rating": 3
-    };
+      "rating": 5
+    };*/
 
-    this.tvShowService.addTvShow(newTvShow).subscribe((tvShow) => this.userTvShows.push(tvShow));
+    this.tvShowService.addTvShow(newTvShow)
+      .subscribe((tvShow) => {
+        this.userTvShows.push(tvShow);
+        this.table.renderRows();
+      });
   }
 
 }

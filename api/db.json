@@ -73,6 +73,90 @@
       "watchingEpisode": 10,
       "completed": false,
       "rating": 3
+    },
+    {
+      "tvShow": {
+        "name": "Banshee",
+        "genre": "action",
+        "productionCompany": "HBO"
+      },
+      "watchingSeason": 2,
+      "watchingEpisode": 1,
+      "completed": false,
+      "rating": 5,
+      "id": 3
+    },
+    {
+      "tvShow": {
+        "name": "breaking bad",
+        "genre": "action",
+        "productionCompany": "HBO"
+      },
+      "watchingSeason": "2",
+      "watchingEpisode": "1",
+      "completed": false,
+      "rating": "4",
+      "id": 4
+    },
+    {
+      "tvShow": {
+        "name": "Raised by Wolves",
+        "genre": "fantasy",
+        "productionCompany": "HBO"
+      },
+      "watchingSeason": "1",
+      "watchingEpisode": "10",
+      "completed": false,
+      "rating": "3",
+      "id": 5
+    },
+    {
+      "tvShow": {
+        "name": "daredevil",
+        "genre": "action",
+        "productionCompany": "netflix"
+      },
+      "watchingSeason": "1",
+      "watchingEpisode": "1",
+      "completed": false,
+      "rating": "4",
+      "id": 6
+    },
+    {
+      "tvShow": {
+        "name": "jessica jones",
+        "genre": "action",
+        "productionCompany": "netflix"
+      },
+      "watchingSeason": "1",
+      "watchingEpisode": "1",
+      "completed": true,
+      "rating": "2",
+      "id": 7
+    },
+    {
+      "tvShow": {
+        "name": "pelado puto",
+        "genre": "chupa verga",
+        "productionCompany": "pija grande"
+      },
+      "watchingSeason": "1",
+      "watchingEpisode": "10",
+      "completed": false,
+      "rating": "5",
+      "id": 8
+    },
+    {
+      "tvShow": {
+        "name": "a",
+        "genre": "b",
+        "productionCompany": "c"
+      },
+      "watchingSeason": "2",
+      "watchingEpisode": "1",
+      "completed": false,
+      "rating": "2",
+      "id": 9
     }
   ]
 }

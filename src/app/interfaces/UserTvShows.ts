@@ -1,7 +1,7 @@
 import { TvShow } from './TvShow';
 
 export interface UserTvShows {
-  id: number;
+  id?: number;
   tvShow: TvShow;
   watchingSeason: number;
   watchingEpisode: number;
