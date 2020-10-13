@@ -1,0 +1,53 @@
+<h1>Please add a new tv show!</h1>
+<mat-dialog-content>
+  <!-- Tv show name section -->
+
+  <mat-form-field>
+    <mat-label>Tv show name: </mat-label>
+    <input matInput/>   <!-- [(ngModel)]="newTvShow.tvShow.name" -->
+  </mat-form-field>
+
+  <!-- Tv show genre section -->
+
+  <mat-form-field> 
+    <mat-label>Tv show genre: </mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <!-- Tv show Production Company section -->
+
+  <mat-form-field>
+    <mat-label>Tv show Production Company: </mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <!-- Watching Season section -->
+
+  <mat-form-field>
+    <mat-label>You are watching season: </mat-label>
+    <input matInput/>
+  </mat-form-field>
+
+  <!-- Watching Episode section -->
+  <mat-form-field>
+    <mat-label>You are watching episode: </mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <!-- Completed section -->
+  <mat-form-field>
+    <mat-label>Do you finish this tv show? </mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <!-- Personal Rating section -->
+  <mat-form-field>
+    <mat-label>Rating of the show </mat-label>
+    <input matInput />
+  </mat-form-field>
+</mat-dialog-content>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="saveTvShow()">Save tv show</button>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+</div>

@@ -1,6 +1,6 @@
-import { TvShow } from './tv-shows';
+import { TvShow } from './TvShow';
 
-export interface FavouriteTvShow {
+export interface UserTvShows {
   id: number;
   tvShow: TvShow;
   watchingSeason: number;

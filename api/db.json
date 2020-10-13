@@ -1,5 +1,5 @@
 {
-  "favouriteMovies": [
+  "userMovies": [
     {
       "id": 0,
       "movie": {
@@ -34,14 +34,14 @@
       "rating": 1
     }
   ],
-  "favouriteTvShows": [
+  "userTvShows": [
     {
       "id": 0,
       "tvShow": {
         "id": 0,
         "name": "Lost",
         "genre": "fansty",
-        "productionCompnay": "AMAZON"
+        "productionCompany": "AMAZON"
       },
       "watchingSeason": 2,
       "watchingEpisode": 10,
@@ -54,7 +54,7 @@
         "id": 1,
         "name": "Westworld UPDETIADO PA",
         "genre": "sci fi",
-        "productionCompnay": "HBO"
+        "productionCompany": "HBO"
       },
       "watchingSeason": 300,
       "watchingEpisode": 400,
@@ -67,7 +67,7 @@
         "id": 2,
         "name": "Black Mirror",
         "genre": "sci fi",
-        "productionCompnay": "BBC"
+        "productionCompany": "BBC"
       },
       "watchingSeason": 1,
       "watchingEpisode": 10,

@@ -1,25 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { TvShowsService } from '../services/tv-shows.service';
 
-import { FavouriteTvShow } from '../interfaces/favourite-tv-shows';
+import { UserTvShows } from '../interfaces/UserTvShows';
+import { Observable } from 'rxjs';
+
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DialogAddTvShowComponent } from '../dialog-add-tv-show/dialog-add-tv-show.component';
 
 @Component({
   selector: 'app-tv-shows-reminder',
   templateUrl: './tv-shows-reminder.component.html',
   styleUrls: ['./tv-shows-reminder.component.css']
 })
-export class TvShowsReminderComponent implements OnInit {
+export class TvShowsReminderComponent implements AfterViewInit { //implements OnInit {
 
-  userTvShows: FavouriteTvShow[] = [];
+  userTvShows: UserTvShows[] = [];
+  displayedColumns: string[] = ['tvShowName', 'tvShowGenre', 'productionCompany', 'watchingSeason', 'WatchingEpisode', 'completed', 'personalRating'];
 
-  constructor(private tvShowService: TvShowsService) { }
+  constructor(private tvShowService: TvShowsService, public dialog: MatDialog) { }
 
-  ngOnInit(): void {
-    this.getAllShows();
+  /*ngOnInit(): void {
+    //this.getAllShows();
     //this.getOneTvShowById();
     //this.deleteTvShowById();
     //this.updateTvShowById();
     //this.addTvShow();
+  }*/
+
+
+  openTvShowDialog(): void {
+    let dialogRef = this.dialog.open(DialogAddTvShowComponent,{
+      height: '600',
+      width: '600px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  ngAfterViewInit(): void{
+    this.getAllShows();
   }
 
   getAllShows(): void {
@@ -35,7 +56,7 @@ export class TvShowsReminderComponent implements OnInit {
   }
 
   deleteTvShowById(): void {
-    this.tvShowService.deleteTvShow(1).subscribe();
+    this.tvShowService.deleteTvShow(3).subscribe();
   }
 
   updateTvShowById(): void {
@@ -45,7 +66,7 @@ export class TvShowsReminderComponent implements OnInit {
         "id": 1,
         "name": "Westworld UPDETIADO PA",
         "genre": "sci fi",
-        "productionCompnay": "HBO"
+        "productionCompany": "HBO"
       },
       "watchingSeason": 300,
       "watchingEpisode": 400,
@@ -58,12 +79,12 @@ export class TvShowsReminderComponent implements OnInit {
 
   addTvShow(): void {
     const newTvShow = {
-      "id": 2,
+      "id": 3,
       "tvShow": {
-        "id": 2,
+        "id": 3,
         "name": "Black Mirror",
         "genre": "sci fi",
-        "productionCompnay": "BBC"
+        "productionCompany": "BBC"
       },
       "watchingSeason": 1,
       "watchingEpisode": 10,
