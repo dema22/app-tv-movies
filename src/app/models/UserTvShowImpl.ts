@@ -1,31 +1,21 @@
 import { TvShowImpl } from './TvShowImpl';
 
 export class UserTvShowsImpl {
-
+  // Remember to use typescript convention (_ for prrivate properties, and getters and setters with the name of the property)
   constructor(
-    public tvShow?: TvShowImpl,
-    public watchingSeason?: number,
-    public watchingEpisode?: number,
-    public completed?: boolean,
-    public rating?: number,
-  ) {}  
-  
-  //constructor() {}
-
-  /*constructor(
-    private _tvShow: TvShowImpl,
-    private _watchingSeason: number,
-    private _watchingEpisode: number,
-    private _completed: boolean,
-    private _rating: number,
+    private _tvShow?: TvShowImpl,
+    private _watchingSeason?: number,
+    private _watchingEpisode?: number,
+    private _completed?: boolean,
+    private _rating?: number,
   ) {}
 
-  get id(): number {
-    return this._id;
+  get tvShow(): TvShowImpl {
+    return this._tvShow;
   }
 
-  set id(newId: number) {
-    this._id = newId;
+  set tvShow(tvShow: TvShowImpl) {
+    this._tvShow = tvShow;
   }
 
   get watchingSeason(): number {
@@ -34,7 +24,29 @@ export class UserTvShowsImpl {
 
   set watchingSeason(watchingSeason: number) {
     this._watchingSeason = watchingSeason;
-  }*/
+  }
 
+  get watchingEpisode(): number {
+    return this._watchingEpisode;
+  }
 
+  set watchingEpisode(watchingEpisode: number) {
+    this._watchingEpisode = watchingEpisode;
+  }
+
+  get completed(): boolean {
+    return this._completed;
+  }
+
+  set completed(completed: boolean) {
+    this._completed = completed;
+  }
+
+  get rating(): number {
+    return this._rating;
+  }
+
+  set rating(rating: number) {
+    this._rating = rating;
+  }
 }

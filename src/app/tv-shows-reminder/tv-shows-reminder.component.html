@@ -20,43 +20,43 @@
     <!-- Name Column -->
     <ng-container matColumnDef="tvShowName">
         <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.tvShow.name}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._tvShow._name}} </td>
     </ng-container>
     
     <!-- Genre Column -->
     <ng-container matColumnDef="tvShowGenre">
         <th mat-header-cell *matHeaderCellDef> Genre </th>
-        <td mat-cell *matCellDef="let element"> {{element.tvShow.genre}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._tvShow._genre}} </td>
     </ng-container>
 
     <!-- Production Company Column -->
     <ng-container matColumnDef="productionCompany">
         <th mat-header-cell *matHeaderCellDef> Production Company </th>
-        <td mat-cell *matCellDef="let element"> {{element.tvShow.productionCompany}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._tvShow._productionCompany}} </td>
     </ng-container>
 
     <!-- Watching Season Column -->
     <ng-container matColumnDef="watchingSeason">
         <th mat-header-cell *matHeaderCellDef> Watching Season </th>
-        <td mat-cell *matCellDef="let element"> {{element.watchingSeason}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._watchingSeason}} </td>
     </ng-container>
 
     <!-- Watching Episode Column -->
     <ng-container matColumnDef="WatchingEpisode">
         <th mat-header-cell *matHeaderCellDef> Watching Episode </th>
-        <td mat-cell *matCellDef="let element"> {{element.watchingEpisode}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._watchingEpisode}} </td>
     </ng-container>
 
     <!-- Completed Column -->
     <ng-container matColumnDef="completed">
         <th mat-header-cell *matHeaderCellDef> Completed </th>
-        <td mat-cell *matCellDef="let element"> {{element.completed}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._completed}} </td>
     </ng-container>
 
     <!-- Personal Rating Column -->
     <ng-container matColumnDef="personalRating">
         <th mat-header-cell *matHeaderCellDef> Personal Rating </th>
-        <td mat-cell *matCellDef="let element"> {{element.rating}} </td>
+        <td mat-cell *matCellDef="let element"> {{element._rating}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
